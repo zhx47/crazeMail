@@ -1,0 +1,24 @@
+server:
+  port: 10025
+  servlet:
+    context-path: /crazeMail
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/application?useUnicode=true&characterEncoding=utf8&useCursorFetch=true&defaultFetchSize=500&allowMultiQueries=true&rewriteBatchedStatements=true&useSSL=false
+    username: root
+    password: root@7642
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  messages:
+    encoding: UTF-8
+
+mybatis-plus:
+  mapper-locations: classpath:./mapper/*.xml
+
+smtp:
+  server:
+    port: 25
+    page-size: 10
